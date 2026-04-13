@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football News & Match Schedule</title>
+  <meta name="description" content="Cập nhật tin tức bóng đá, lịch thi đấu và kết quả mới nhất" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">⚽</div>
+        Football<span>News</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="schedule.html">Lịch thi đấu</a></li>
+        <li><a href="results.html">Kết quả</a></li>
+        <li><a href="teams.html">Đội bóng</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="active">🏠 Trang chủ</a>
+      <a href="news.html">📰 Tin tức</a>
+      <a href="schedule.html">📅 Lịch thi đấu</a>
+      <a href="results.html">🏆 Kết quả</a>
+      <a href="teams.html">👕 Đội bóng</a>
+    </div>
+  </nav>
+
+  <!-- ===== LIVE SCORE BAR ===== -->
+  <div class="live-score-bar">
+    <div class="live-scores">
+      <div class="live-score-item">
+        <span class="live-dot"></span>
+        <span>Man City</span>
+        <span class="score">2 - 1</span>
+        <span>Arsenal</span>
+        <span style="color:#888;font-size:0.75rem">72'</span>
+      </div>
+      <div class="live-score-item">
+        <span class="live-dot"></span>
+        <span>Real Madrid</span>
+        <span class="score">1 - 0</span>
+        <span>Barcelona</span>
+        <span style="color:#888;font-size:0.75rem">45'</span>
+      </div>
+      <div class="live-score-item">
+        <span class="live-dot"></span>
+        <span>PSG</span>
+        <span class="score">3 - 2</span>
+        <span>Lyon</span>
+        <span style="color:#888;font-size:0.75rem">88'</span>
+      </div>
+      <div class="live-score-item">
+        <span class="live-dot"></span>
+        <span>Bayern</span>
+        <span class="score">4 - 0</span>
+        <span>Dortmund</span>
+        <span style="color:#888;font-size:0.75rem">FT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="ticker-label">🔴 BREAKING</span>
+      Haaland lập hat-trick trong trận Man City vs Arsenal &nbsp;|&nbsp;
+      Real Madrid gia hạn hợp đồng với Vinicius Jr đến 2030 &nbsp;|&nbsp;
+      Mbappe chấn thương, nghi ngờ vắng mặt ở trận El Clasico &nbsp;|&nbsp;
+      Ronaldo ghi bàn thứ 900 trong sự nghiệp &nbsp;|&nbsp;
+      Liverpool mua tiền đạo người Brazil với giá 80 triệu bảng &nbsp;|&nbsp;
+      Đội tuyển Việt Nam chuẩn bị cho vòng loại World Cup 2026 &nbsp;|&nbsp;
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">⚽ Football News & Match Schedule</div>
+      <h1>Cập nhật <span>Tin tức</span> &<br>Lịch thi đấu bóng đá mới nhất</h1>
+      <p>Theo dõi kết quả, lịch thi đấu và tin tức bóng đá từ các giải đấu hàng đầu thế giới — cập nhật 24/7.</p>
+      <div class="hero-buttons">
+        <a href="news.html" class="btn btn-primary">📰 Xem tin tức</a>
+        <a href="schedule.html" class="btn btn-outline">📅 Lịch thi đấu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">⚽ <strong>12</strong> Trận hôm nay</div>
+      <div class="stat-item">🔴 <strong>4</strong> Đang diễn ra</div>
+      <div class="stat-item">🏆 <strong>8</strong> Giải đấu</div>
+      <div class="stat-item">📰 <strong>24</strong> Tin mới</div>
+      <div class="stat-item" style="margin-left:auto">🕐 <span id="live-clock">--:--:--</span></div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="home-layout">
+
+        <!-- Main Content -->
+        <main>
+          <div class="section-header">
+            <h2 class="section-title">Tin tức nổi bật</h2>
+            <a href="news.html" class="btn btn-outline btn-sm">Xem tất cả →</a>
+          </div>
+
+          <div class="cards-grid">
+
+            <!-- Card 1 -->
+            <article class="card">
+              <div class="card-img-wrap">
+                <img src="images/news/news1.jpg" alt="Haaland hat-trick" class="card-img" />
+                <span class="card-tag">Premier League</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>📅 13/04/2026</span>
+                  <span>👁 12.4K</span>
+                </div>
+                <h3 class="card-title">Haaland lập hat-trick, Man City đại thắng Arsenal 4-1 tại Etihad</h3>
+                <p class="card-desc">Erling Haaland tiếp tục thống trị Premier League khi ghi 3 bàn trong trận thắng đậm trước Arsenal, đưa Man City lên đỉnh bảng xếp hạng với cách biệt 5 điểm.</p>
+                <a href="news.html" class="btn btn-primary btn-sm">Xem thêm →</a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+              <div class="card-img-wrap">
+                <img src="images/news/news2.jpg" alt="El Clasico" class="card-img" />
+                <span class="card-tag">La Liga</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>📅 12/04/2026</span>
+                  <span>👁 28.7K</span>
+                </div>
+                <h3 class="card-title">El Clasico kịch tính: Real Madrid thắng Barcelona 2-1 nhờ bàn phút 90</h3>
+                <p class="card-desc">Trận El Clasico tại Bernabeu kết thúc với chiến thắng nghẹt thở cho Real Madrid sau bàn thắng ở phút bù giờ của Bellingham, giúp Los Blancos duy trì ngôi đầu La Liga.</p>
+                <a href="news.html" class="btn btn-primary btn-sm">Xem thêm →</a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+              <div class="card-img-wrap">
+                <img src="images/news/news3.jpg" alt="Champions League" class="card-img" />
+                <span class="card-tag">Champions League</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>📅 11/04/2026</span>
+                  <span>👁 19.2K</span>
+                </div>
+                <h3 class="card-title">Bayern Munich vào bán kết Champions League sau màn trình diễn xuất sắc</h3>
+                <p class="card-desc">Die Roten đã vượt qua PSG với tổng tỉ số 5-2 sau 2 lượt trận, đặt một chân vào bán kết Champions League mùa này với màn trình diễn đầy thuyết phục.</p>
+                <a href="news.html" class="btn btn-primary btn-sm">Xem thêm →</a>
+              </div>
+            </article>
+
+          </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+          <!-- Quick Schedule Widget -->
+          <div class="sidebar-widget">
+            <div class="widget-header">📅 Lịch thi đấu hôm nay</div>
+            <div class="widget-body">
+
+              <div class="match-item match-hot">
+                <div class="match-league">🔥 Premier League</div>
+                <div class="match-teams">
+                  <span class="match-team">Man City</span>
+                  <span class="match-vs">HOT</span>
+                  <span class="match-team right">Arsenal</span>
+                </div>
+                <div class="match-time">🕐 20:00 ICT</div>
+              </div>
+
+              <div class="match-item">
+                <div class="match-league">La Liga</div>
+                <div class="match-teams">
+                  <span class="match-team">Atletico</span>
+                  <span class="match-vs">VS</span>
+                  <span class="match-team right">Sevilla</span>
+                </div>
+                <div class="match-time">🕐 22:00 ICT</div>
+              </div>
+
+              <div class="match-item match-hot">
+                <div class="match-league">🔥 Champions League</div>
+                <div class="match-teams">
+                  <span class="match-team">Inter Milan</span>
+                  <span class="match-vs">HOT</span>
+                  <span class="match-team right">Chelsea</span>
+                </div>
+                <div class="match-time">🕐 02:00 ICT</div>
+              </div>
+
+              <div class="match-item">
+                <div class="match-league">Bundesliga</div>
+                <div class="match-teams">
+                  <span class="match-team">Leverkusen</span>
+                  <span class="match-vs">VS</span>
+                  <span class="match-team right">Leipzig</span>
+                </div>
+                <div class="match-time">🕐 21:30 ICT</div>
+              </div>
+
+              <div class="match-item">
+                <div class="match-league">Serie A</div>
+                <div class="match-teams">
+                  <span class="match-team">Juventus</span>
+                  <span class="match-vs">VS</span>
+                  <span class="match-team right">AC Milan</span>
+                </div>
+                <div class="match-time">🕐 23:45 ICT</div>
+              </div>
+
+              <a href="schedule.html" class="btn btn-outline btn-sm" style="width:100%;text-align:center;margin-top:10px;display:block">Xem đầy đủ →</a>
+            </div>
+          </div>
+
+          <!-- Top Scorers Widget -->
+          <div class="sidebar-widget">
+            <div class="widget-header">🥇 Vua phá lưới</div>
+            <div class="widget-body">
+              <table style="width:100%;font-size:0.82rem">
+                <thead>
+                  <tr>
+                    <th style="padding:6px 8px;text-align:left">#</th>
+                    <th style="padding:6px 8px;text-align:left">Cầu thủ</th>
+                    <th style="padding:6px 8px;text-align:center">Bàn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:8px;color:#ffd60a;font-weight:700">1</td>
+                    <td style="padding:8px">Haaland</td>
+                    <td style="padding:8px;text-align:center;color:#00c2ff;font-weight:700">28</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:8px;color:#888">2</td>
+                    <td style="padding:8px">Mbappe</td>
+                    <td style="padding:8px;text-align:center;color:#00c2ff;font-weight:700">24</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:8px;color:#888">3</td>
+                    <td style="padding:8px">Salah</td>
+                    <td style="padding:8px;text-align:center;color:#00c2ff;font-weight:700">22</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:8px;color:#888">4</td>
+                    <td style="padding:8px">Kane</td>
+                    <td style="padding:8px;text-align:center;color:#00c2ff;font-weight:700">21</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:8px;color:#888">5</td>
+                    <td style="padding:8px">Lewandowski</td>
+                    <td style="padding:8px;text-align:center;color:#00c2ff;font-weight:700">19</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Standings Widget -->
+          <div class="sidebar-widget">
+            <div class="widget-header">📊 BXH Premier League</div>
+            <div class="widget-body">
+              <table style="width:100%;font-size:0.8rem">
+                <thead>
+                  <tr>
+                    <th style="padding:5px 6px">#</th>
+                    <th style="padding:5px 6px;text-align:left">Đội</th>
+                    <th style="padding:5px 6px;text-align:center">Đ</th>
+                    <th style="padding:5px 6px;text-align:center">Pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #222;background:rgba(0,87,184,0.15)">
+                    <td style="padding:7px 6px;color:#ffd60a;font-weight:700">1</td>
+                    <td style="padding:7px 6px;font-weight:600">Man City</td>
+                    <td style="padding:7px 6px;text-align:center;color:#888">32</td>
+                    <td style="padding:7px 6px;text-align:center;color:#00c2ff;font-weight:700">78</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:7px 6px;color:#888">2</td>
+                    <td style="padding:7px 6px;font-weight:600">Arsenal</td>
+                    <td style="padding:7px 6px;text-align:center;color:#888">32</td>
+                    <td style="padding:7px 6px;text-align:center;color:#00c2ff;font-weight:700">73</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:7px 6px;color:#888">3</td>
+                    <td style="padding:7px 6px;font-weight:600">Liverpool</td>
+                    <td style="padding:7px 6px;text-align:center;color:#888">32</td>
+                    <td style="padding:7px 6px;text-align:center;color:#00c2ff;font-weight:700">71</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #222">
+                    <td style="padding:7px 6px;color:#888">4</td>
+                    <td style="padding:7px 6px;font-weight:600">Chelsea</td>
+                    <td style="padding:7px 6px;text-align:center;color:#888">32</td>
+                    <td style="padding:7px 6px;text-align:center;color:#00c2ff;font-weight:700">65</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:7px 6px;color:#888">5</td>
+                    <td style="padding:7px 6px;font-weight:600">Tottenham</td>
+                    <td style="padding:7px 6px;text-align:center;color:#888">32</td>
+                    <td style="padding:7px 6px;text-align:center;color:#00c2ff;font-weight:700">58</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORE NEWS ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tin tức mới nhất</h2>
+        <a href="news.html" class="btn btn-outline btn-sm">Xem tất cả →</a>
+      </div>
+      <div class="cards-grid">
+
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/news/news4.jpg" alt="Ronaldo" class="card-img" />
+            <span class="card-tag">Saudi Pro League</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>📅 10/04/2026</span><span>👁 8.1K</span></div>
+            <h3 class="card-title">Ronaldo ghi bàn thứ 900 trong sự nghiệp, lập kỷ lục lịch sử</h3>
+            <p class="card-desc">Cristiano Ronaldo tiếp tục viết lịch sử khi ghi bàn thứ 900 trong sự nghiệp chuyên nghiệp, một cột mốc chưa ai từng đạt được trong lịch sử bóng đá thế giới.</p>
+            <a href="news.html" class="btn btn-primary btn-sm">Xem thêm →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/news/news5.jpg" alt="Transfer" class="card-img" />
+            <span class="card-tag">Chuyển nhượng</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>📅 09/04/2026</span><span>👁 15.3K</span></div>
+            <h3 class="card-title">Liverpool chi 80 triệu bảng mua tiền đạo người Brazil từ Flamengo</h3>
+            <p class="card-desc">The Reds đã hoàn tất thương vụ chuyển nhượng đắt giá nhất lịch sử câu lạc bộ khi đưa về Anfield ngôi sao trẻ người Brazil đang được cả châu Âu săn đón.</p>
+            <a href="news.html" class="btn btn-primary btn-sm">Xem thêm →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/news/news6.jpg" alt="Vietnam" class="card-img" />
+            <span class="card-tag">Bóng đá Việt Nam</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>📅 08/04/2026</span><span>👁 22.6K</span></div>
+            <h3 class="card-title">Đội tuyển Việt Nam triệu tập 25 cầu thủ chuẩn bị vòng loại World Cup</h3>
+            <p class="card-desc">HLV trưởng đội tuyển Việt Nam đã công bố danh sách 25 cầu thủ cho đợt tập trung chuẩn bị cho 2 trận đấu quan trọng trong vòng loại World Cup 2026 khu vực châu Á.</p>
+            <a href="news.html" class="btn btn-primary btn-sm">Xem thêm →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">⚽</div>
+          Football<span>News</span>
+        </a>
+        <p>Website cung cấp thông tin bóng đá toàn diện — tin tức, lịch thi đấu, kết quả và thông tin đội bóng từ các giải đấu hàng đầu thế giới.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="index.html">→ Trang chủ</a></li>
+          <li><a href="news.html">→ Tin tức</a></li>
+          <li><a href="schedule.html">→ Lịch thi đấu</a></li>
+          <li><a href="results.html">→ Kết quả</a></li>
+          <li><a href="teams.html">→ Đội bóng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Giải đấu</h4>
+        <ul>
+          <li><a href="#">→ Premier League</a></li>
+          <li><a href="#">→ La Liga</a></li>
+          <li><a href="#">→ Champions League</a></li>
+          <li><a href="#">→ Bundesliga</a></li>
+          <li><a href="#">→ V.League</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><a href="#">📧 contact@footballnews.vn</a></li>
+          <li><a href="#">📞 0123 456 789</a></li>
+          <li><a href="#">📍 Hà Nội, Việt Nam</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 - Designed by <a href="#">Nguyễn Hoài Thiện</a> | Football News & Match Schedule</p>
+      <p>Dữ liệu chỉ mang tính minh họa</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

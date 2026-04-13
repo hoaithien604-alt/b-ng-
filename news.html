@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin tuc - Football News &amp; Match Schedule</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x26BD;</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">&#x26BD;</div>
+        Football<span>News</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chu</a></li>
+        <li><a href="news.html" class="active">Tin tuc</a></li>
+        <li><a href="schedule.html">Lich thi dau</a></li>
+        <li><a href="results.html">Ket qua</a></li>
+        <li><a href="teams.html">Doi bong</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">&#127968; Trang chu</a>
+      <a href="news.html" class="active">&#128240; Tin tuc</a>
+      <a href="schedule.html">&#128197; Lich thi dau</a>
+      <a href="results.html">&#127942; Ket qua</a>
+      <a href="teams.html">&#128085; Doi bong</a>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chu</a> &rsaquo; <span>Tin tuc</span>
+      </div>
+      <h1>&#128240; Tin tuc <span>Bong da</span></h1>
+      <p>Cap nhat tin tuc bong da moi nhat tu cac giai dau hang dau the gioi</p>
+    </div>
+  </div>
+
+  <!-- ===== NEWS SECTION ===== -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Tat ca</button>
+        <button class="filter-tab" data-filter="pl">Premier League</button>
+        <button class="filter-tab" data-filter="laliga">La Liga</button>
+        <button class="filter-tab" data-filter="ucl">Champions League</button>
+        <button class="filter-tab" data-filter="bundesliga">Bundesliga</button>
+        <button class="filter-tab" data-filter="vn">Bong da Viet Nam</button>
+      </div>
+
+      <!-- News Grid -->
+      <div class="cards-grid">
+
+        <!-- Bai 1: Haaland hat-trick -->
+        <article class="card" data-league="pl">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=300&fit=crop&q=80"
+              alt="Haaland hat-trick Man City vs Arsenal"
+              class="card-img"
+            />
+            <span class="card-tag">Premier League</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 13/04/2026</span>
+              <span>&#128065; 12.4K</span>
+            </div>
+            <h3 class="card-title">Haaland lap hat-trick, Man City dai thang Arsenal 4-1 tai Etihad</h3>
+            <p class="card-desc">Erling Haaland tiep tuc thong tri Premier League khi ghi 3 ban trong tran thang dam truoc Arsenal, dua Man City len dinh bang xep hang voi cach biet 5 diem so voi doi nhi bang.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 2: El Clasico -->
+        <article class="card" data-league="laliga">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?w=600&h=300&fit=crop&q=80"
+              alt="El Clasico Real Madrid vs Barcelona"
+              class="card-img"
+            />
+            <span class="card-tag">La Liga</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 12/04/2026</span>
+              <span>&#128065; 28.7K</span>
+            </div>
+            <h3 class="card-title">El Clasico kich tinh: Real Madrid thang Barcelona 2-1 nho ban phut 90</h3>
+            <p class="card-desc">Tran El Clasico tai Bernabeu ket thuc voi chien thang nghet tho cho Real Madrid sau ban thang o phut bu gio cua Bellingham, giup Los Blancos duy tri ngoi dau La Liga.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 3: Bayern Champions League -->
+        <article class="card" data-league="ucl">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=300&fit=crop&q=80"
+              alt="Bayern Munich Champions League"
+              class="card-img"
+            />
+            <span class="card-tag">Champions League</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 11/04/2026</span>
+              <span>&#128065; 19.2K</span>
+            </div>
+            <h3 class="card-title">Bayern Munich vao ban ket Champions League sau man trinh dien xuat sac</h3>
+            <p class="card-desc">Die Roten da vuot qua PSG voi tong ti so 5-2 sau 2 luot tran, dat mot chan vao ban ket Champions League mua nay voi man trinh dien day thuyet phuc.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 4: Liverpool chuyen nhuong -->
+        <article class="card" data-league="pl">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&h=300&fit=crop&q=80"
+              alt="Liverpool chuyen nhuong"
+              class="card-img"
+            />
+            <span class="card-tag">Premier League</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 10/04/2026</span>
+              <span>&#128065; 9.8K</span>
+            </div>
+            <h3 class="card-title">Liverpool chi 80 trieu bang mua tien dao nguoi Brazil tu Flamengo</h3>
+            <p class="card-desc">The Reds da hoan tat thuong vu chuyen nhuong dat gia nhat lich su cau lac bo khi dua ve Anfield ngoi sao tre nguoi Brazil dang duoc ca chau Au san don.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 5: Mbappe chan thuong -->
+        <article class="card" data-league="laliga">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=300&fit=crop&q=80"
+              alt="Mbappe chan thuong"
+              class="card-img"
+            />
+            <span class="card-tag">La Liga</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 09/04/2026</span>
+              <span>&#128065; 31.5K</span>
+            </div>
+            <h3 class="card-title">Mbappe chan thuong co dui, nghi ngo vang mat o tran El Clasico tiep theo</h3>
+            <p class="card-desc">Kylian Mbappe phai roi san som trong tran dau gan nhat cua Real Madrid sau khi gap chan thuong co dui. Ban huan luyen lo ngai tien dao nguoi Phap se vang mat trong 3-4 tuan toi.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 6: Leverkusen vo dich -->
+        <article class="card" data-league="bundesliga">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&h=300&fit=crop&q=80"
+              alt="Bayer Leverkusen vo dich Bundesliga"
+              class="card-img"
+            />
+            <span class="card-tag">Bundesliga</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 08/04/2026</span>
+              <span>&#128065; 7.3K</span>
+            </div>
+            <h3 class="card-title">Bayer Leverkusen vo dich Bundesliga lan thu 2 lien tiep voi 5 vong dau con lai</h3>
+            <p class="card-desc">Die Werkself da chinh thuc gianh chuc vo dich Bundesliga som 5 vong sau chien thang 3-0 truoc Dortmund, khang dinh su thong tri tuyet doi tai giai dau trong nuoc.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 7: Doi tuyen Viet Nam -->
+        <article class="card" data-league="vn">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&h=300&fit=crop&q=80"
+              alt="Doi tuyen Viet Nam World Cup"
+              class="card-img"
+            />
+            <span class="card-tag">Bong da Viet Nam</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 07/04/2026</span>
+              <span>&#128065; 22.6K</span>
+            </div>
+            <h3 class="card-title">Doi tuyen Viet Nam trieu tap 25 cau thu chuan bi vong loai World Cup 2026</h3>
+            <p class="card-desc">HLV truong doi tuyen Viet Nam da cong bo danh sach 25 cau thu cho dot tap trung chuan bi cho 2 tran dau quan trong trong vong loai World Cup 2026 khu vuc chau A.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 8: Chelsea Champions League -->
+        <article class="card" data-league="ucl">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=600&h=300&fit=crop&q=80"
+              alt="Chelsea Champions League"
+              class="card-img"
+            />
+            <span class="card-tag">Champions League</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 06/04/2026</span>
+              <span>&#128065; 14.1K</span>
+            </div>
+            <h3 class="card-title">Chelsea gay soc khi loai Inter Milan khoi Champions League o tu ket</h3>
+            <p class="card-desc">The Blues da tao nen bat ngo lon khi danh bai Inter Milan voi tong ti so 3-2 sau 2 luot tran, lan dau tien vao ban ket Champions League sau 15 nam.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Bai 9: Salah gia han -->
+        <article class="card" data-league="pl">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1589487391730-58f20eb2c308?w=600&h=300&fit=crop&q=80"
+              alt="Salah gia han Liverpool"
+              class="card-img"
+            />
+            <span class="card-tag">Premier League</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>&#128197; 05/04/2026</span>
+              <span>&#128065; 18.9K</span>
+            </div>
+            <h3 class="card-title">Salah gia han hop dong voi Liverpool them 2 nam, tu choi loi moi tu Saudi Arabia</h3>
+            <p class="card-desc">Mohamed Salah da chinh thuc ky hop dong moi voi Liverpool den nam 2028, cham dut nhung don doan ve viec tien dao nguoi Ai Cap se roi Anfield de sang Saudi Pro League.</p>
+            <a href="#" class="btn btn-primary btn-sm">Xem them &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">&#x26BD;</div>
+          Football<span>News</span>
+        </a>
+        <p>Website cung cap thong tin bong da toan dien &mdash; tin tuc, lich thi dau, ket qua va thong tin doi bong tu cac giai dau hang dau the gioi.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">t</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Dieu huong</h4>
+        <ul>
+          <li><a href="index.html">&rarr; Trang chu</a></li>
+          <li><a href="news.html">&rarr; Tin tuc</a></li>
+          <li><a href="schedule.html">&rarr; Lich thi dau</a></li>
+          <li><a href="results.html">&rarr; Ket qua</a></li>
+          <li><a href="teams.html">&rarr; Doi bong</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Giai dau</h4>
+        <ul>
+          <li><a href="#">&rarr; Premier League</a></li>
+          <li><a href="#">&rarr; La Liga</a></li>
+          <li><a href="#">&rarr; Champions League</a></li>
+          <li><a href="#">&rarr; Bundesliga</a></li>
+          <li><a href="#">&rarr; V.League</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Lien he</h4>
+        <ul>
+          <li><a href="#">&#128231; contact@footballnews.vn</a></li>
+          <li><a href="#">&#128222; 0123 456 789</a></li>
+          <li><a href="#">&#128205; Ha Noi, Viet Nam</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 - Designed by <a href="#">Nguyen Hoai Thien</a> | Football News &amp; Match Schedule</p>
+      <p>Du lieu chi mang tinh minh hoa</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

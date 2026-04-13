@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kết quả - Football News & Match Schedule</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">⚽</div>
+        Football<span>News</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="schedule.html">Lịch thi đấu</a></li>
+        <li><a href="results.html" class="active">Kết quả</a></li>
+        <li><a href="teams.html">Đội bóng</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">🏠 Trang chủ</a>
+      <a href="news.html">📰 Tin tức</a>
+      <a href="schedule.html">📅 Lịch thi đấu</a>
+      <a href="results.html" class="active">🏆 Kết quả</a>
+      <a href="teams.html">👕 Đội bóng</a>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a> › <span>Kết quả</span>
+      </div>
+      <h1>🏆 Kết quả <span>Trận đấu</span></h1>
+      <p>Kết quả các trận đấu mới nhất từ các giải bóng đá hàng đầu thế giới</p>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS SECTION ===== -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Tất cả</button>
+        <button class="filter-tab" data-filter="pl">Premier League</button>
+        <button class="filter-tab" data-filter="laliga">La Liga</button>
+        <button class="filter-tab" data-filter="ucl">Champions League</button>
+        <button class="filter-tab" data-filter="bundesliga">Bundesliga</button>
+        <button class="filter-tab" data-filter="seriea">Serie A</button>
+      </div>
+
+      <!-- ===== 12/04/2026 ===== -->
+      <div class="section-header" style="margin-bottom:15px">
+        <h3 class="section-title" style="font-size:1.2rem">📆 Chủ Nhật, 12/04/2026</h3>
+      </div>
+      <div class="table-wrap" style="margin-bottom:35px">
+        <table>
+          <thead>
+            <tr>
+              <th>Giải đấu</th>
+              <th>Đội nhà</th>
+              <th style="text-align:center">Tỉ số</th>
+              <th>Đội khách</th>
+              <th style="text-align:center">Trạng thái</th>
+              <th>Ghi chú</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-league="laliga">
+              <td><span style="color:#00c2ff;font-weight:600">La Liga</span></td>
+              <td class="team-cell">🇪🇸 Real Madrid</td>
+              <td class="score-cell">2 — 1</td>
+              <td class="team-cell">🇪🇸 Barcelona</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Bellingham 90+2'</td>
+            </tr>
+            <tr data-league="pl">
+              <td><span style="color:#00c2ff;font-weight:600">Premier League</span></td>
+              <td class="team-cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Man City</td>
+              <td class="score-cell">4 — 1</td>
+              <td class="team-cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Arsenal</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Haaland x3, De Bruyne</td>
+            </tr>
+            <tr data-league="bundesliga">
+              <td><span style="color:#00c2ff;font-weight:600">Bundesliga</span></td>
+              <td class="team-cell">🇩🇪 Bayern Munich</td>
+              <td class="score-cell">4 — 0</td>
+              <td class="team-cell">🇩🇪 Dortmund</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Kane x2, Musiala, Sane</td>
+            </tr>
+            <tr data-league="seriea">
+              <td><span style="color:#00c2ff;font-weight:600">Serie A</span></td>
+              <td class="team-cell">🇮🇹 Inter Milan</td>
+              <td class="score-cell">2 — 2</td>
+              <td class="team-cell">🇮🇹 Napoli</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Lautaro, Thuram | Osimhen x2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== 11/04/2026 ===== -->
+      <div class="section-header" style="margin-bottom:15px">
+        <h3 class="section-title" style="font-size:1.2rem">📆 Thứ Bảy, 11/04/2026</h3>
+      </div>
+      <div class="table-wrap" style="margin-bottom:35px">
+        <table>
+          <thead>
+            <tr>
+              <th>Giải đấu</th>
+              <th>Đội nhà</th>
+              <th style="text-align:center">Tỉ số</th>
+              <th>Đội khách</th>
+              <th style="text-align:center">Trạng thái</th>
+              <th>Ghi chú</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-league="ucl">
+              <td><span style="color:#ffd60a;font-weight:600">Champions League</span></td>
+              <td class="team-cell">🇩🇪 Bayern Munich</td>
+              <td class="score-cell">3 — 1</td>
+              <td class="team-cell">🇫🇷 PSG</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Tổng 5-2, Bayern vào BK</td>
+            </tr>
+            <tr data-league="pl">
+              <td><span style="color:#00c2ff;font-weight:600">Premier League</span></td>
+              <td class="team-cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Liverpool</td>
+              <td class="score-cell">3 — 0</td>
+              <td class="team-cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Tottenham</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Salah x2, Diaz</td>
+            </tr>
+            <tr data-league="laliga">
+              <td><span style="color:#00c2ff;font-weight:600">La Liga</span></td>
+              <td class="team-cell">🇪🇸 Atletico Madrid</td>
+              <td class="score-cell">1 — 1</td>
+              <td class="team-cell">🇪🇸 Villarreal</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Griezmann | Morales</td>
+            </tr>
+            <tr data-league="bundesliga">
+              <td><span style="color:#00c2ff;font-weight:600">Bundesliga</span></td>
+              <td class="team-cell">🇩🇪 Leverkusen</td>
+              <td class="score-cell">3 — 0</td>
+              <td class="team-cell">🇩🇪 Dortmund</td>
+              <td style="text-align:center"><span class="status-ft">FT</span></td>
+              <td style="color:#888;font-size:0.82rem">Wirtz x2, Boniface</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== 10/04/2026 - LIVE ===== -->
+      <div class="section-header" style="margin-bottom:15px">
+        <h3 class="section-title" style="font-size:1.2rem">🔴 Đang diễn ra — 13/04/2026</h3>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Giải đấu</th>
+              <th>Đội nhà</th>
+              <th style="text-align:center">Tỉ số</th>
+              <th>Đội khách</th>
+              <th style="text-align:center">Trạng thái</th>
+              <th>Phút</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(230,57,70,0.08)" data-league="pl">
+              <td><span style="color:#00c2ff;font-weight:600">Premier League</span></td>
+              <td class="team-cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Man City</td>
+              <td class="score-cell" style="color:#e63946">2 — 1</td>
+              <td class="team-cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Arsenal</td>
+              <td style="text-align:center"><span class="status-live">LIVE</span></td>
+              <td style="color:#ffd60a;font-weight:700">72'</td>
+            </tr>
+            <tr style="background:rgba(230,57,70,0.08)" data-league="laliga">
+              <td><span style="color:#00c2ff;font-weight:600">La Liga</span></td>
+              <td class="team-cell">🇪🇸 Real Madrid</td>
+              <td class="score-cell" style="color:#e63946">1 — 0</td>
+              <td class="team-cell">🇪🇸 Barcelona</td>
+              <td style="text-align:center"><span class="status-live">LIVE</span></td>
+              <td style="color:#ffd60a;font-weight:700">45'</td>
+            </tr>
+            <tr style="background:rgba(230,57,70,0.08)" data-league="ucl">
+              <td><span style="color:#ffd60a;font-weight:600">Champions League</span></td>
+              <td class="team-cell">🇫🇷 PSG</td>
+              <td class="score-cell" style="color:#e63946">3 — 2</td>
+              <td class="team-cell">🇫🇷 Lyon</td>
+              <td style="text-align:center"><span class="status-live">LIVE</span></td>
+              <td style="color:#ffd60a;font-weight:700">88'</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">⚽</div>
+          Football<span>News</span>
+        </a>
+        <p>Website cung cấp thông tin bóng đá toàn diện — tin tức, lịch thi đấu, kết quả và thông tin đội bóng từ các giải đấu hàng đầu thế giới.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="index.html">→ Trang chủ</a></li>
+          <li><a href="news.html">→ Tin tức</a></li>
+          <li><a href="schedule.html">→ Lịch thi đấu</a></li>
+          <li><a href="results.html">→ Kết quả</a></li>
+          <li><a href="teams.html">→ Đội bóng</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Giải đấu</h4>
+        <ul>
+          <li><a href="#">→ Premier League</a></li>
+          <li><a href="#">→ La Liga</a></li>
+          <li><a href="#">→ Champions League</a></li>
+          <li><a href="#">→ Bundesliga</a></li>
+          <li><a href="#">→ V.League</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><a href="#">📧 contact@footballnews.vn</a></li>
+          <li><a href="#">📞 0123 456 789</a></li>
+          <li><a href="#">📍 Hà Nội, Việt Nam</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 - Designed by <a href="#">Nguyễn Hoài Thiện</a> | Football News & Match Schedule</p>
+      <p>Dữ liệu chỉ mang tính minh họa</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
